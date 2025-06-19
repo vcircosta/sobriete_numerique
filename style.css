@@ -1,0 +1,114 @@
+:root {
+  --carrefour-blue: #003399;
+  --carrefour-red: #e1000f;
+  --white: #ffffff;
+  --light-gray: #f5f5f5;
+  --dark-gray: #333333;
+  --medium-gray: #666666;
+  --accent-bg: #eef3fc;
+  --danger-bg: #fff0f2;
+  --danger-text: #b3001b;
+  --danger-border: #ffb3b9;
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  line-height: 1.7;
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+  font-size: 1.1rem;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--carrefour-blue);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--carrefour-red);
+  border-bottom: 3px solid var(--carrefour-blue);
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--carrefour-blue);
+  margin-bottom: 0.8rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  color: var(--medium-gray);
+}
+
+ul {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 1.2rem;
+  color: var(--medium-gray);
+}
+
+li::marker {
+  color: var(--carrefour-blue);
+}
+
+section {
+  background: var(--white);
+  padding: 1.8rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2.5rem;
+}
+
+.highlight {
+  background-color: var(--accent-bg);
+  border-left: 5px solid var(--carrefour-blue);
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.ecoindex-danger {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background-color: var(--danger-bg);
+  color: var(--danger-text);
+  border: 2px solid var(--danger-border);
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 1px 4px rgba(179, 0, 27, 0.2);
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--medium-gray);
+  letter-spacing: 0.03em;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+}
