@@ -112,3 +112,79 @@ footer {
   padding-top: 1.5rem;
   border-top: 1px solid #ddd;
 }
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.metric-card {
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.metric-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.metric-score {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Metric Card Colors */
+.metric-card.performance {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.metric-card.performance .metric-score {
+  color: #dc2626;
+}
+
+.metric-card.accessibility {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.metric-card.accessibility .metric-score {
+  color: #16a34a;
+}
+
+.metric-card.best-practices {
+  background-color: #fffbeb;
+  border: 1px solid #fed7aa;
+}
+
+.metric-card.best-practices .metric-score {
+  color: #d97706;
+}
+
+.metric-card.seo {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.metric-card.seo .metric-score {
+  color: #16a34a;
+}
