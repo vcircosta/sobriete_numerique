@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Audit numérique éco-conçu du service en ligne Carrefour selon les critères de conception responsable." />
+  <meta name="description" content="Audit numérique éco-conçu du service Carrefour Drive selon les critères de conception responsable." />
   <link rel="stylesheet" href="style.css" />
-  <title>Audit Numérique Responsable - Carrefour</title>
+  <title>Audit Numérique Responsable - Carrefour Drive</title>
 </head>
 <body>
   <header>
-    <h1>Audit d’un Service Numérique - Conception Responsable chez Carrefour</h1>
+    <h1>Audit d’un Service Numérique - Conception Responsable chez Carrefour Drive</h1>
   </header>
 
   <main>
-        <section id="introduction" aria-labelledby="intro-title">
+    <section id="introduction" aria-labelledby="intro-title">
       <h2 id="intro-title">1. Introduction</h2>
       <p>
         Dans un contexte où la transition numérique doit s’accompagner d’une prise de conscience environnementale et sociale, l’audit numérique responsable devient un levier essentiel pour les grandes entreprises. 
-        Ce document présente une analyse approfondie de la plateforme e-commerce de Carrefour, acteur majeur de la grande distribution en France et à l’international.
+        Ce document présente une analyse approfondie du service Carrefour Drive, plateforme dédiée au retrait de courses en ligne, proposée par Carrefour.
       </p>
       <p>
         L’objectif de cet audit est d’évaluer le service sous l’angle de l’écoconception, de l’accessibilité numérique, ainsi que de la contribution aux Objectifs de Développement Durable (ODD) définis par l’ONU. 
@@ -26,33 +26,29 @@
       <p>
         Cette étude s’appuie sur des mesures quantitatives (EcoIndex, scores Lighthouse) et qualitatives (analyse de l’interface, ergonomie) pour proposer un diagnostic fiable et des recommandations pragmatiques.
       </p>
-        </section>
-
+    </section>
 
     <section id="presentation" aria-labelledby="presentation-title">
       <h2 id="presentation-title">2. Présentation de l’entreprise et du service</h2>
       <p>
-        Carrefour est l’un des leaders mondiaux de la grande distribution, présent dans plus de 30 pays avec plus de 12 000 points de vente, et une forte présence digitale qui complète son réseau physique. 
-        Avec plus de 80 ans d’expérience, Carrefour s’est engagé dans une transformation profonde visant à concilier croissance économique et responsabilité sociétale.
+        Carrefour est l’un des leaders mondiaux de la grande distribution, présent dans plus de 30 pays avec plus de 12 000 points de vente.  
+        En complément de ses magasins physiques, Carrefour a développé le service **Carrefour Drive**, qui permet aux clients de commander leurs courses en ligne et de les récupérer sans entrer dans le magasin.
       </p>
       <p>
-        La plateforme e-commerce de Carrefour joue un rôle clé dans cette stratégie, en offrant aux clients un accès facile et rapide à une large gamme de produits alimentaires, d’électroménager, d’habillement, et bien plus. 
-        Ce service numérique doit répondre à des exigences croissantes en matière de performance, de disponibilité, et surtout de durabilité numérique.
+        Carrefour Drive répond aux besoins d’un mode de consommation pratique, rapide et sans contact, particulièrement plébiscité depuis la crise sanitaire.  
+        Il joue un rôle stratégique dans l’omnicanalité de l’entreprise.
       </p>
-      <p>
-        Le service propose notamment :
-      </p>
+      <p>Le service propose notamment :</p>
       <ul>
-        <li>🛒 Une navigation intuitive permettant de parcourir facilement les catégories et sous-catégories produits.</li>
-        <li>🔍 Un moteur de recherche optimisé avec suggestions personnalisées basées sur l’historique et les préférences utilisateur.</li>
-        <li>📦 Un système de gestion des paniers et des commandes simplifié pour un parcours d’achat fluide.</li>
-        <li>♻️ Une démarche active de réduction de l’empreinte carbone numérique, intégrant la sobriété des ressources et l’accessibilité pour tous.</li>
+        <li>🚗 Une sélection rapide des produits via une interface de recherche et de filtres optimisés.</li>
+        <li>📱 Une version mobile ergonomique permettant de faire ses courses depuis un smartphone.</li>
+        <li>📍 Un système de géolocalisation des Drive les plus proches et une planification des créneaux de retrait.</li>
+        <li>♻️ Un engagement à limiter l’impact environnemental (réduction du plastique, optimisation logistique).</li>
       </ul>
       <p>
-        Ce contexte fait de la plateforme Carrefour un exemple pertinent pour analyser les enjeux liés à la conception responsable des services numériques dans le secteur du commerce en ligne.
+        Carrefour Drive est donc un excellent terrain pour observer les enjeux de sobriété numérique et d’accessibilité dans le secteur des courses en ligne.
       </p>
     </section>
-
 
     <section id="audit-technique" aria-labelledby="audit-technique-title">
       <h2 id="audit-technique-title">3. Audit technique</h2>
@@ -60,49 +56,48 @@
       <article class="highlight" aria-labelledby="ecoconception-title">
         <h3 id="ecoconception-title">♻️ Écoconception :</h3>
         <ul>
-          <li>Poids moyen d’une page produit : 4.5 Mo (images et scripts inclus), un chiffre élevé impactant la consommation énergétique.</li>
-          <li>Nombre moyen d’éléments DOM : 5200, notamment en raison des modules de promotion et recommandations dynamiques.</li>
+          <li>Poids moyen d’une page panier ou liste de courses : 3.8 Mo, impactant la rapidité sur mobile.</li>
+          <li>Présence d’éléments DOM complexes (4000-4500), notamment dans les listes de produits affichées dynamiquement.</li>
           <li>Faiblesses détectées :
             <ul>
-              <li>Images produit non compressées sur certaines résolutions.</li>
-              <li>Forte dépendance à des scripts tiers (publicité, analytics), générant des requêtes multiples et une empreinte carbone accrue.</li>
+              <li>Images de produits parfois non compressées ou trop grandes pour les écrans mobiles.</li>
+              <li>Dépendance à des services tiers (analytics, géolocalisation, chatbots) augmentant les requêtes réseau.</li>
             </ul>
           </li>
         </ul>
         <p class="ecoindex-danger" aria-live="polite">
-          Note EcoIndex : <strong>D</strong> – marge de progression importante pour tendre vers une sobriété numérique.
+          Note EcoIndex : <strong>C</strong> – marge d’amélioration notable pour une meilleure sobriété numérique.
         </p>
       </article>
 
       <article class="highlight" aria-labelledby="accessibilite-title">
         <h3 id="accessibilite-title">🔎 Accessibilité :</h3>
         <ul>
-          <li>Score Lighthouse : 88%</li>
-          <li>Navigation clavier perfectible dans les listes de produits et certains formulaires de paiement.</li>
-          <li>Absence d’attributs ARIA dans certains composants interactifs.</li>
+          <li>Score Lighthouse : 85%</li>
+          <li>Des composants comme les sélecteurs de créneaux ou filtres ne sont pas totalement accessibles au clavier.</li>
+          <li>Certains boutons manquent d’attributs ARIA pour les lecteurs d’écran.</li>
         </ul>
         <p>
-          Une accessibilité numérique renforcée s’inscrit dans la démarche inclusive de Carrefour, visant à offrir une expérience équitable à tous les utilisateurs, y compris en situation de handicap.
+          Une amélioration de l’accessibilité permettrait d’élargir l’usage du service aux personnes en situation de handicap.
         </p>
       </article>
 
       <article class="highlight" aria-labelledby="qualite-title">
         <h3 id="qualite-title">✅ Qualité :</h3>
         <ul>
-          <li>Respect global des bonnes pratiques SEO, renforçant la visibilité des produits éthiques et responsables.</li>
-          <li>Interface responsive, moderne et optimisée pour les usages mobiles.</li>
-          <li>Affichage clair des labels RSE (bio, commerce équitable, origine locale) sur les fiches produits.</li>
+          <li>Bonne optimisation SEO sur les pages produits les plus fréquentes.</li>
+          <li>Design responsive bien pensé pour le mobile, principal canal d’accès à Carrefour Drive.</li>
+          <li>Mise en avant des produits locaux et bio avec des pictogrammes clairs.</li>
         </ul>
         <p>
-          Ces éléments participent à la mission de transparence et d'engagement responsable portée par Carrefour.
+          Le service soutient ainsi les engagements de Carrefour pour une consommation responsable et locale.
         </p>
       </article>
 
       <p>
-        L’audit technique met en lumière les leviers d’amélioration pour renforcer la performance numérique tout en respectant les engagements RSE de Carrefour : réduction de l’empreinte environnementale, accessibilité universelle et valorisation d’une consommation plus responsable.
+        L’audit technique de Carrefour Drive montre une base solide mais perfectible, avec des améliorations possibles sur la légèreté des pages et l’accessibilité, sans compromettre la fluidité d’usage.
       </p>
     </section>
-
 
     <section id="points-forts-faibles" aria-labelledby="points-forts-faibles-title">
       <h2 id="points-forts-faibles-title">4. Points forts et faibles</h2>
@@ -110,61 +105,44 @@
       <div class="highlight">
         <p>✅ <strong>Points forts :</strong></p>
         <ul>
-          <li><strong>Expérience utilisateur fluide :</strong> navigation intuitive, chargement rapide des contenus principaux, hiérarchisation claire de l'information.</li>
-          <li><strong>Respect des bonnes pratiques d’écoconception :</strong> images optimisées, ressources statiques bien mises en cache, composants réutilisables.</li>
-          <li><strong>Architecture robuste :</strong> base technique solide, peu de bugs visibles, bonne stabilité sur les différents navigateurs testés.</li>
-          <li><strong>Responsive design :</strong> interface bien adaptée aux écrans mobiles et tablettes, avec une bonne prise en compte des points de rupture.</li>
+          <li><strong>Expérience utilisateur fluide :</strong> parcours clair, rapide et adapté à un usage récurrent.</li>
+          <li><strong>Bonne ergonomie mobile :</strong> boutons accessibles, informations synthétiques, paniers bien structurés.</li>
+          <li><strong>Optimisation de certaines ressources :</strong> minification CSS/JS, mise en cache des ressources statiques.</li>
         </ul>
       </div>
 
       <div class="highlight" style="background-color: var(--danger-bg); border-left: 5px solid var(--danger-text);">
         <p>⚠️ <strong>Points faibles :</strong></p>
         <ul>
-          <li><strong>Poids des pages :</strong> certaines pages dépassent les 2 Mo, ce qui ralentit le chargement sur des connexions mobiles ou en zones peu couvertes. Une optimisation des images (lazy loading, WebP) et un audit des ressources inutilisées sont recommandés.</li>
-          <li><strong>Dépendance aux scripts tiers :</strong> la présence de bibliothèques externes non critiques (ex. : widgets, analytics multiples) alourdit le chargement et pose des problèmes de confidentialité (RGPD).</li>
-          <li><strong>Accessibilité incomplète :</strong> certains modules comme les filtres, les carrousels ou les modales ne sont pas pleinement utilisables au clavier ni bien interprétés par les lecteurs d’écran.</li>
-          <li><strong>Mauvaise hiérarchie des titres sur certaines pages :</strong> usage incorrect de balises h3/h4 sans ordre logique, ce qui nuit à la compréhension pour les personnes utilisant des technologies d’assistance.</li>
+          <li><strong>Poids élevé des pages liste/produits :</strong> images lourdes, filtres dynamiques peu optimisés.</li>
+          <li><strong>Dépendance aux scripts tiers :</strong> géolocalisation, analyse de comportement, chat.</li>
+          <li><strong>Accessibilité perfectible :</strong> manque d’annonces vocales, composants non accessibles au clavier.</li>
         </ul>
       </div>
     </section>
 
-
     <section id="recommendations" aria-labelledby="recommendations-title">
       <h2 id="recommendations-title">5. Recommandations</h2>
       <ul>
-        <li>
-          <strong>Optimiser les images produits :</strong><br />  
-          Les images représentent une part importante du poids total des pages, impactant directement la vitesse de chargement et la consommation de données. Il est recommandé de convertir les images au format WebP ou AVIF, qui offrent une meilleure compression tout en maintenant une qualité visuelle élevée. Cette optimisation permet de réduire significativement la bande passante utilisée, contribuant ainsi à une meilleure performance et à une empreinte carbone numérique allégée.
-        </li>
-        <li>
-          <strong>Limiter l’usage de scripts tiers non essentiels :</strong><br />  
-          Les services de tracking, de publicité ou d’analytics peuvent introduire des appels réseau supplémentaires, ralentir le chargement et poser des questions en termes de respect de la vie privée. Carrefour doit identifier et supprimer les scripts tiers qui ne sont pas indispensables au fonctionnement du site ou à l’analyse stratégique, afin de réduire la complexité et la charge énergétique globale du service.
-        </li>
-        <li>
-          <strong>Renforcer la navigation clavier et la gestion des focus :</strong><br />  
-          Pour garantir une accessibilité optimale, en particulier dans le tunnel d’achat où l’expérience utilisateur doit être fluide et sans friction, il est crucial d’améliorer la navigation au clavier. Cela comprend la gestion rigoureuse des focus, l’utilisation d’indicateurs visuels clairs, ainsi que la prise en compte des lecteurs d’écran. Ces améliorations facilitent l’accès aux personnes en situation de handicap et améliorent la convivialité générale.
-        </li>
-        <li>
-          <strong>Mettre en place un monitoring EcoIndex continu :</strong><br />  
-          Afin de suivre l’impact environnemental du service numérique dans la durée, il est conseillé de déployer un système automatisé de mesure régulière des indicateurs EcoIndex. Ce monitoring permet de détecter rapidement les régressions, d’évaluer les effets des optimisations mises en œuvre, et de piloter la stratégie d’écoconception avec des données actualisées et fiables.
-        </li>
+        <li><strong>Réduire le poids des images produit</strong> (formats WebP/AVIF, lazy loading intelligent).</li>
+        <li><strong>Limiter les appels réseaux tiers</strong> à ceux strictement nécessaires.</li>
+        <li><strong>Renforcer l’accessibilité clavier</strong> et améliorer l’usage des lecteurs d’écran.</li>
+        <li><strong>Mettre en place un suivi EcoIndex</strong> continu sur les pages critiques (liste produits, panier, confirmation commande).</li>
       </ul>
     </section>
-
 
     <section id="conclusion" aria-labelledby="conclusion-title">
       <h2 id="conclusion-title">6. Conclusion</h2>
       <p>
-        Carrefour dispose d’une base robuste et bien pensée pour une conception responsable de sa plateforme numérique, intégrant déjà des bonnes pratiques en matière de performance et d’expérience utilisateur.  
-        Cependant, pour renforcer pleinement son engagement en matière de Responsabilité Sociétale des Entreprises (RSE), il est essentiel d’intensifier les efforts autour de la sobriété numérique et de l’accessibilité.  
-        Ces axes d’amélioration permettront non seulement de réduire l’impact environnemental du service mais aussi d’assurer une inclusion optimale de tous les utilisateurs, contribuant ainsi à une transformation digitale durable et respectueuse des enjeux sociétaux.
+        Carrefour Drive constitue un exemple pertinent d’un service numérique orienté vers l’efficacité et la praticité.  
+        Toutefois, un renforcement de l’écoconception et de l’accessibilité contribuerait à en faire un modèle plus complet de durabilité numérique.  
+        Ces efforts s’inscrivent dans la continuité de l’engagement RSE du groupe Carrefour.
       </p>
     </section>
-
   </main>
 
   <footer role="contentinfo">
-    Conception sobre, respect de l’environnement et de l’accessibilité pour une meilleure expérience utilisateur chez Carrefour.
+    Conception sobre, accessibilité renforcée et réduction de l’impact environnemental pour un service Drive plus responsable.
   </footer>
 </body>
 </html>
