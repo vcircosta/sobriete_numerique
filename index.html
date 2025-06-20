@@ -52,28 +52,47 @@
 
     <section id="audit-technique" aria-labelledby="audit-technique-title">
       <h2 id="audit-technique-title">3. Audit technique</h2>
+      <p>
+        Audit réalisé avec Lighthouse. Voici les 4 chiffres clés :
+      </p>
+      <div class="metrics-grid">
+        <div class="metric-card performance">
+          <h3>Performances</h3>
+          <p class="metric-score">39/100</p>
+        </div>
+        <div class="metric-card accessibility">
+          <h3>Accessibilité</h3>
+          <p class="metric-score">91/100</p>
+        </div>
+        <div class="metric-card best-practices">
+          <h3>Bonnes Pratiques</h3>
+          <p class="metric-score">75/100</p>
+        </div>
+        <div class="metric-card seo">
+          <h3>SEO</h3>
+          <p class="metric-score">92/100</p>
+        </div>
+      </div>
+
+      <p>
+        Les analyses wave et ecoindex n'ont pas fonctionné car carrefour utilise un systeme de détection de bots.
+      </p>
 
       <article class="highlight" aria-labelledby="ecoconception-title">
-        <h3 id="ecoconception-title">♻️ Écoconception :</h3>
+        <h3 id="ecoconception-title">♻️ Performance et écoconception :</h3>
         <ul>
-          <li>Poids moyen d’une page panier ou liste de courses : 3.8 Mo, impactant la rapidité sur mobile.</li>
+          <li>Métrique LCP très élevée (17 110 ms), impactant la rapidité de chargement de la page.</li>
           <li>Présence d’éléments DOM complexes (4000-4500), notamment dans les listes de produits affichées dynamiquement.</li>
-          <li>Faiblesses détectées :
-            <ul>
-              <li>Images de produits parfois non compressées ou trop grandes pour les écrans mobiles.</li>
-              <li>Dépendance à des services tiers (analytics, géolocalisation, chatbots) augmentant les requêtes réseau.</li>
-            </ul>
-          </li>
+          <li>Thread principal surchargé (4,9 s bloqué), impactant la rapidité de chargement de la page.</li>
+          <li>JS trop lourd (2,4 s d'exécution, 822 Kio inutiles), le temps d'exécution est trop long.</li>
+          <li>Images de produits parfois non compressées ou trop grandes pour les écrans mobiles.</li>
+          <li>Dépendance à des services tiers (analytics, géolocalisation, chatbots) augmentant les requêtes réseau. (29 requêtes au total lors du chargement de la page)</li>
         </ul>
-        <p class="ecoindex-danger" aria-live="polite">
-          Note EcoIndex : <strong>C</strong> – marge d’amélioration notable pour une meilleure sobriété numérique.
-        </p>
       </article>
 
       <article class="highlight" aria-labelledby="accessibilite-title">
         <h3 id="accessibilite-title">🔎 Accessibilité :</h3>
         <ul>
-          <li>Score Lighthouse : 85%</li>
           <li>Des composants comme les sélecteurs de créneaux ou filtres ne sont pas totalement accessibles au clavier.</li>
           <li>Certains boutons manquent d’attributs ARIA pour les lecteurs d’écran.</li>
         </ul>
@@ -83,11 +102,12 @@
       </article>
 
       <article class="highlight" aria-labelledby="qualite-title">
-        <h3 id="qualite-title">✅ Qualité :</h3>
+        <h3 id="qualite-title">✅ Points forts :</h3>
         <ul>
-          <li>Bonne optimisation SEO sur les pages produits les plus fréquentes.</li>
+          <li>Bonne optimisation SEO sur les pages produits les plus fréquentes. (SEO : 92/100)</li>
           <li>Design responsive bien pensé pour le mobile, principal canal d’accès à Carrefour Drive.</li>
           <li>Mise en avant des produits locaux et bio avec des pictogrammes clairs.</li>
+          <li>La note d'accessibilité est malgré tout très élevée (91/100)</li>
         </ul>
         <p>
           Le service soutient ainsi les engagements de Carrefour pour une consommation responsable et locale.
@@ -95,7 +115,7 @@
       </article>
 
       <p>
-        L’audit technique de Carrefour Drive montre une base solide mais perfectible, avec des améliorations possibles sur la légèreté des pages et l’accessibilité, sans compromettre la fluidité d’usage.
+        L'audit du site de Carrefour Drive montre une base solide d'un point de vue référencement et accessibilité, en revanche il y a beaucoup à faire au niveau de la performance et du respect des bonnes pratiques.
       </p>
     </section>
 
